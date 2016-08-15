@@ -69,7 +69,7 @@
 
 
     new hover($('*[data-hover]'));
-
+ 
     $('#r_download').hover(function () {
         $('.icon_code_h', this).show();
         $('.icon_code_p', this).animate({ left: 0 }, 300);
@@ -79,6 +79,44 @@
             $('.icon_code_h', _this).hide();
         });
     }); 
+
+    $("#nav_list").on("click","li",function(){
+
+                $(".ripple").remove();
+
+
+                var posX = $(this).offset().left,
+                posY = $(this).offset().top,
+                buttonWidth = $(this).width(),
+                buttonHeight = $(this).height();
+
+                $(this).prepend("<span class='ripple'></span>");
+
+
+                if (buttonWidth >= buttonHeight) {
+                    buttonHeight = buttonWidth;
+                } else {
+                    buttonWidth = buttonHeight;
+                }
+
+                var x = e.pageX - posX - buttonWidth / 2;
+                var y = e.pageY - posY - buttonHeight / 2;
+
+
+                $(".ripple").css({
+                    width: buttonWidth,
+                    height: buttonHeight,
+                    top: y + 'px',
+                    left: x + 'px'
+                }).addClass("rippleEffect");
+
+    });
+
+    $("#nav_list").on("click","a",function(){
+
+                
+        return false;
+    });
 
 
 
