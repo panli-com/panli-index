@@ -1,0 +1,42 @@
+.common-wrap{
+  a{
+    display: block;
+    background-color: #FFE6EA;
+    color: #DC879B;
+    padding: 5px;
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}
+.address-wrap{
+  width: 100%;
+  vertical-align: middle;
+  font-size: 0.7rem;
+  border:1px solid #CCC;
+  border-left: none;
+  border-right: none;
+  padding: .8rem .5rem;
+  .p1{
+    
+  }
+  .radio-wrap{
+    padding-right: 0.5rem;
+    text-align: right;
+    label{
+      padding-left: 0.3rem;
+      padding-right: 0.2rem;
+    }
+  }
+}
+.add-radio{
+  width: 1.05rem;
+  height: 1.05rem;
+  -webkit-appearance: none;
+  background-image: url(../images/sprite_radio.png);
+  background-repeat: no-repeat;
+  background-size: 2.5rem 3.75rem;
+  margin-right: 0.2rem;
+  &:checked {
+    background-position: 0 -1.1rem;
+  }
+}

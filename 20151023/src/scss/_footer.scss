@@ -1,0 +1,29 @@
+.footer,.overlay {
+	height:2.5rem;
+	z-index:2;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	background:#000000;
+}
+.footer .footer_toolbar {
+	padding:0.375rem 0.25rem;
+	height:100%;
+}
+.footer .cal_btn {
+	display:block;
+	background:#FF4D6B;
+	border-radius:0.125rem;
+	height:100%;
+	width:100%;
+	text-align:center;
+	line-height:200%;
+	color:#FFFFFF;
+	font-size:0.85rem;
+}
+.no-click{
+	-moz-opacity:0.5;
+	-webkit-opacity:0.5;
+	opacity: 0.5;
+}

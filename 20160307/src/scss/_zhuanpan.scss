@@ -1,0 +1,168 @@
+.page-zhuanpan{   
+    position: relative;
+}
+.zhuanpan-wrap{
+    
+    width: 650px;
+    height: 553px;
+    background: url(../images/zhuanpan.png) no-repeat;
+    .zhuanpan-box{
+        position: relative;
+        padding: 34px 0 0 33px; 
+        li{
+            float: left;
+            width: 190px;
+            height: 153px;
+            margin: 2px;
+            // border-radius: 16px;
+            background:  url(../images/panbg3.png) no-repeat;
+            background-position: 0 -153px;
+            span{
+               
+                display: inline-block;
+                width: 190px;
+                height: 126px;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                
+            }
+            &.current{
+                background-image:  url(../images/panbg1.png);
+                background-position: 0 0;
+            }
+            &.li1{
+                span{
+                    background-image: url(../images/pan33.png);
+                }
+            }
+            &.li2{
+                span{
+                    background-image: url(../images/pan0.png);
+                }
+            }
+            &.li3{
+                span{
+                    background-image: url(../images/pan44.png);
+                }
+            }
+            &.li8{
+                span{
+                    background-image: url(../images/pan11.png);
+                }
+            }
+            &.li9{
+                cursor: pointer;
+                background-image: url(../images/pan99_a.png);
+                background-position: 0 0;
+                &:active{
+                    background-position: 0 -153px;
+                }
+            }
+            &.li4{
+                span{
+                    background-image: url(../images/pan22.png);
+                }
+            }
+            &.li7{
+                span{
+                    background-image: url(../images/pan66.png);
+                }
+            }
+            &.li6{
+                span{
+                    background-image: url(../images/pan77.png);
+                }
+            }
+            &.li5{
+                span{
+                    background-image: url(../images/pan55.png);
+                }
+            }
+            
+            
+        }
+        
+    }
+    
+    
+}
+
+.jiangpin-wrap{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 341px;
+    .my-pin-btn{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 320px;
+        height: 70px;
+        display: block;
+        background: url(../images/mylipin-btn.png) no-repeat;
+        cursor: pointer;
+    }
+    
+    .list-name-wrap{
+        width: 341px;
+        height: 464px;
+        padding-top: 96px;
+        background: url(../images/listNamebg.png) no-repeat;
+    }
+    
+    .list-name{
+        height: 340px;
+        overflow: hidden;
+        padding: 0 28px;
+        li{
+            font-size: 13px;
+            color: #FFF;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            border-bottom: 1px dotted #8a4ee6;
+            .name{
+                color: #ffe400;
+            }
+            .pin{
+               color: #ff6666;
+            }
+            .time{
+                float: right;
+            }
+        }
+    }
+    
+}
+
+// 抽奖次数
+.chance-num-wrap{
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+.chance-num-box{
+    position: relative;
+    background: #4f2e84;
+    display: inline-block;
+    height: 46px;
+    line-height: 35px;
+    color: #ffefce;
+    padding: 0 30px;
+    border-radius: 30px;
+    font-size: 22px;
+    .lihe{
+        position: absolute;
+        left: -44px;
+        top: -10px;
+        width: 66px;
+        height: 64px;
+        display: inline-block;
+        background: url(../images/lihe.png) no-repeat;
+    }
+    .chance-num{
+        color: #ffe400;
+        font-size: 36px;
+        
+    }
+}

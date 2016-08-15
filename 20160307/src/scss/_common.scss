@@ -1,0 +1,40 @@
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+
+.clearfix {display:block;}
+
+.clear{
+  clear:both;
+  overflow:hidden;
+}
+
+
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.m-auto{
+  margin: 0 auto;
+}
+.red{
+  color: #ff2828;
+}
+.font20{
+  font-size: 20px;
+}
+.font30{
+  font-size: 30px;
+}
+.del-link{
+  text-decoration:line-through;
+}
+
+*:focus {outline: none;}
+
+.page-w{
+    width: 1000px;
+}
+

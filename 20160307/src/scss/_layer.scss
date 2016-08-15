@@ -1,0 +1,147 @@
+
+.layui-Pan-nobg{
+    background-color: transparent;
+}
+.layer-none{
+    display: none;
+}
+
+.page-layer-main{
+    background: #ff4343;
+    border-radius: 6px;
+    padding: 8px;
+    display: inline-block;
+    color: #FFF;
+    .page-layer-border{
+        width: 458px;
+        margin: 0 auto;
+        border: 2px dotted #ff6e66;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .l-close{
+        position: absolute;
+        cursor: pointer;
+        right: 10px;
+        top: 10px;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        background: url(../images/close.png) no-repeat;
+    }   
+    
+    .layer-my-popup-info{
+        text-align: center;
+        padding-top: 22px;
+    
+        .p1{
+            color: #fff55c;
+            font-size: 21px;
+            line-height: 30px;
+            padding-bottom: 5px;
+        }
+        .p2{
+            padding-bottom: 20px;
+            font-size:14px;
+        }
+    
+    }
+    .layer-btn-wrap{
+        text-align: center;
+        
+    }
+    .layer-btn{
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 auto;
+        width: 178px;
+        height: 42px;
+        line-height: 40px;
+        border: 1px solid #FFF;
+        text-align: center;
+        font-size: 19px;
+        border-radius: 5px;
+        text-decoration: none;
+        &:hover{
+            background: #F53C3C;
+          
+        }
+    }
+    .layer-btn-1{
+        margin-right: 20px;
+        background: #ffd21e;
+        border: 1px solid #ffd21e;
+        color: #f4281b;
+        &:hover{
+            background: #F5C40D;
+            border: 1px solid #F5C40D;
+        }
+    }
+    
+}  
+
+
+
+// 我的奖品
+.page-layer-wrap{
+    position: relative;
+    width: 480px;
+    padding-top: 99px;
+    .page-layer-border{
+        padding-bottom: 0;
+    }
+    .layer-my-pin-img{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 29px;
+        height: 99px;
+        z-index: 10;
+        background: url(../images/myjiangpin.png) no-repeat center center;
+    }
+    .m-close{
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        top: 46px;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        z-index: 20;
+        background: url(../images/close.png) no-repeat;
+    }   
+}
+
+.layer-box-list{
+    padding: 20px;
+    padding-top: 46px;
+    li{
+        font-size: 17px;
+        height: 50px;
+        line-height: 50px;
+        overflow: hidden;
+        padding: 0 10px;
+        .text-name{
+            color: #fdff57;            
+        }
+        .text-num{
+           float: right;
+        }
+        &.lin-0{
+           background-color: #e53939;
+        }
+        &:nth-of-type(odd){
+            background-color: #e53939;
+        }
+        &:nth-of-type(even){
+            // background:#FFCC00;
+        }
+    }
+}
+
+.yourclass1{
+    width: 458px;
+}
+.layui-layer{
+    border-radius: 6px;
+}

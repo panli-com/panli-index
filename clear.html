@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<style>
+    .app span {
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    .app span.on {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="app" id="app">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+</body>
+<script>
+    $(function() {
+        $("#app").on("click", "span", function() {
+            var _t = $(this);
+
+            _t.addClass("on");
+
+
+            setTimeout(function() {
+                _t.removeClass("on");
+            }, 200)
+
+        })
+
+
+    })
+</script>
+
+</html>

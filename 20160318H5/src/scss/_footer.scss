@@ -1,0 +1,32 @@
+.footer{
+    background: #049ECA;
+    padding: pxTorem(40);
+    padding-bottom: 10px;
+    h6{
+        
+        .title{
+           font-size:  pxTorem(30);
+           background: #f44263;
+           color: #fff288;
+           font-style: normal;
+           font-weight: 400;
+           padding: 5px;
+        }
+    }
+    p{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: pxTorem(26);
+        line-height: pxTorem(39);
+    }
+    ol{
+        
+        color: #fff;
+        list-style: decimal;
+        margin-left: -26px;
+        li{
+            font-size: pxTorem(26);
+            line-height: pxTorem(39);
+        }
+    }
+}

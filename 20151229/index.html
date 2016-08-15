@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> multiselect</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="./build/css/main.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://sf.panli.com/Public/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+</head>
+  <body data-spy='scroll'>
+    
+    <div class='container'>
+      <div class='row'>
+        <div class='span12'>
+          <h3>搜索查询选择</h3>
+        </div>        
+        <div class='span12'>
+          <select multiple class="searchable" name="searchable[]">
+          <option value="elem_1" selected='selected'>elem 1</option>
+          <option value="zan">z</option>
+          <option value="elem_2">elem 2</option>
+          <option value="elem_3">elem 3</option>
+          <option value="elem_4" selected='selected'>elem 4</option>
+          <option value="elem_5">elem 5</option>
+          <option value="elem_100">elem 100</option></select>
+          <br />
+        </div>
+        <div class='span12'>
+          <pre><code data-language='html'>&lt;select id='custom-headers' multiple='multiple'&gt;&#x000A;  &lt;option value='elem_1' selected&gt;elem 1&lt;/option&gt;&#x000A;  &lt;option value='elem_2'&gt;elem 2&lt;/option&gt;&#x000A;  &lt;option value='elem_3'&gt;elem 3&lt;/option&gt;&#x000A;  &lt;option value='elem_4' selected&gt;elem 4&lt;/option&gt;&#x000A;  ...&#x000A;  &lt;option value='elem_100'&gt;elem 100&lt;/option&gt;&#x000A;&lt;/select&gt;</code></pre>
+          <pre><code data-language='javascript'>$('.searchable').multiSelect({
+  selectableHeader: "&lt;input type='text' class='search-input' autocomplete='off' placeholder='try \"12\"'&gt;",
+  selectionHeader: "&lt;input type='text' class='search-input' autocomplete='off' placeholder='try \"4\"'&gt;",
+  afterInit: function(ms){
+    var that = this,
+        $selectableSearch = that.$selectableUl.prev(),
+        $selectionSearch = that.$selectionUl.prev(),
+        selectableSearchString = '#'+that.$container.attr('id')+' .ms-elem-selectable:not(.ms-selected)',
+        selectionSearchString = '#'+that.$container.attr('id')+' .ms-elem-selection.ms-selected';
+
+    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+    .on('keydown', function(e){
+      if (e.which === 40){
+        that.$selectableUl.focus();
+        return false;
+      }
+    });
+
+    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+    .on('keydown', function(e){
+      if (e.which == 40){
+        that.$selectionUl.focus();
+        return false;
+      }
+    });
+  },
+  afterSelect: function(){
+    this.qs1.cache();
+    this.qs2.cache();
+  },
+  afterDeselect: function(){
+    this.qs1.cache();
+    this.qs2.cache();
+  }
+});</code></pre>
+        </div>
+      </div>
+     
+    <script src="./build/js/main.min.js" type="text/javascript"></script>
+
+    <script type='text/x-handlebars-template' id='contributors-tpl'>
+      <h3>{{ contributors.length }} contributors</h3>
+      <ul>
+        {{#each contributors}}
+          <li>
+            <img width="35px" height="35px" src="{{avatar_url}}" />
+            <a target="_blank" href="{{html_url}}">{{login}}</a>
+            - {{contributions}} contributions
+          </li>
+        {{/each}}
+      </ul>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+$onlineW: 60px;
+
+.r_l_nav {
+	position:fixed;
+	top:50%;
+	right: 0;
+	//margin-top:-150px;
+	z-index:100;
+	background-color:#f8f8f8;
+	width:$onlineW;
+	//border-top:solid 1px #ddd;
+	// li {
+	// 	width:59px;
+	// 	position:relative;
+		
+	// }
+}
+.hover_b,.hover_a {
+	-webkit-transition:-webkit-transform 0.3s ease-in-out;
+	transition:transform 0.3s ease-in-out;
+}
+
+.no_transform .hover_a,.no_transform .r_l_nav li:hover .hover_b {
+	display:none;
+}
+.no_transform .r_l_nav li:hover .hover_a {
+	display:block;
+}
+.r_l_h85 {
+	height:59px;
+	border:solid 1px #ddd;
+	border-top:none;
+}
+.r_l_h40 {
+	position: relative;
+	height:29px;
+	width: 59px;
+	border:solid 1px #ddd;
+	border-top:none;
+}
+.icon_r_nav {
+	// background:url(../images/kefu.gif) no-repeat;
+	display:block;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.icon_r_navkf {
+	height:57px;
+	width:$onlineW;
+	background:url(../images/online-kefu.png) no-repeat center center;
+}
+.icon_r_navapp {
+	height:$onlineW;
+	width:$onlineW;
+	background:url(../images/online-phone.png) no-repeat center center;
+}
+.icon_r_navback {
+	height:$onlineW;
+	width:$onlineW;
+	background:url(../images/online-black.png) no-repeat center center;
+}
+.icon_r_navjy,.icon_r_navjy_h {
+	height:29px;
+	width:$onlineW;
+	background:url(../images/online-jianyi.png) no-repeat center center;
+}
+.icon_r_navjy_h {
+	background:url(../images/online-jianyi-on.png) no-repeat center center;
+}
+.hover_a {
+	display:block;
+	position:absolute;
+	text-align:center;
+	width:$onlineW;
+	font-size:14px;
+	color:#ff6e6e;
+	left:0px;
+	top:0px;
+	line-height:18px;
+	text-decoration:none;
+	padding-top:10px;
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	transform:scale(0);
+}
+
+.icon_r_navjy_h {
+	padding-top:0px;
+}
+.r_l_line {
+	position:absolute;
+	right:-1px;
+	top:0px;
+	width:0px;
+	height:60px;
+	font-size:0px;
+	line-height:0px;
+	border-right:solid 1px #f8f8f8;
+}
+.hover_b,.hover_a {
+	-webkit-transition:-webkit-transform 0.3s ease-in-out;
+	transition:transform 0.3s ease-in-out;
+}
+.r_l_nav li:hover .hover_a {
+	-webkit-transform:scale(1);
+	-ms-transform:scale(1);
+	transform:scale(1);
+}
+.r_l_nav li:hover .hover_b {
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	transform:scale(0);
+}
+
+.online-ul{
+	
+	.online-li{
+		width:59px;
+		height:59px;
+		position:relative;
+		border:solid 1px #ddd;
+		border-top:none;
+	}
+	.online-li-one{
+		border-top: solid 1px #ddd;
+	}
+}

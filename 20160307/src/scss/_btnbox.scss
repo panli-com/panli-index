@@ -1,0 +1,40 @@
+.btntitle{
+    text-align: center;
+}
+.btntitle-bg{
+    background: #4f2e84;
+    padding: 0 pxTorem(36) 0 pxTorem(76);
+    height: pxTorem(52);
+    line-height: pxTorem(52);
+    position: relative;
+    border-radius: 16px;
+    font-size: pxTorem(30);
+    display: inline-block;
+    .liwu{
+        position: absolute;
+        left: pxTorem(-12);
+        top: pxTorem(-12);
+        width: pxTorem(66);
+        height: pxTorem(64);
+        background: url(../images/liwu.png) no-repeat;
+        background-size: contain;
+    }
+}
+.btn-layer{
+    padding: pxTorem(30);
+    .btnd{
+       display: inline-block;
+       width: pxTorem(300);
+       height: pxTorem(80); 
+       background-size: contain;
+    }
+    .btn-rule{
+        float: right;
+    }
+}
+.btn-my-prize{
+   background-image: url(../images/btn-my-prize.png); 
+}
+.btn-rule{
+   background-image: url(../images/btn-rule.png); 
+}

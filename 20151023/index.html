@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>算一算，海淘到手多少钱</title>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+		<script src="js/main.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.min.css"/>
+	</head>
+	<body>
+		<div id="main">
+			<div class="wrapper">
+			<section class="manualitems ">
+				<div class="goods_P">
+					<p class="p1">商品单价<br/><span>含商家运费</span></p>
+					<div class="goodsprice">
+						<input type="text" placeholder="商品费用" class="price-val moneytxt" data-v="" required/>
+						<div class="moneyunit"><span class="a"></span>
+							<div class="select-wrap">
+								<select class="select-wo" name="price">
+									<option value="us">美元</option>
+									<option value="rmb">人民币</option>
+									<option value="jp">日元</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods_P goods_P2">
+					<p class="p1">商家重量<br/><span>多件一起转运省运费</span></p>
+					<div class="goodsprice">
+						<input type="text" placeholder="商品重量" class="weight-val moneytxt" data-v="" required/>
+						<div class="moneyunit"><span class="a"></span>
+							<div class="select-wrap">
+								<select class="select-wo" name="weight">
+									<option value="g">g</option>
+									<option value="lb">lb</option>
+									<option value="oz">oz</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="common-wrap pd-rem05">
+					<a href="">常见商品估重参考</a>
+				</div>
+				<div class="address-wrap ds-table">
+					<p class="p1 ds-table-cell">商品所在地</p>
+					<div class="radio-wrap ds-table-cell">
+						<label for="us-address">
+							<input id="us-address" type="radio" name="address" class="add-radio" checked>
+							美国
+						</label>
+						<label for="jp-address">
+							<input id="jp-address" type="radio" name="address" class="add-radio">
+							日本
+						</label>
+					</div>
+				</div>
+			</section>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer_toolbar">
+				<a href="javascript:void(0);" id="goto-result" btn-no="false" class="no-click cal_btn calbtndisable">估算海淘费用</a>
+			</div>
+		</footer>
+		<div class="overlay">
+		</div>
+
+	</body>
+</html>

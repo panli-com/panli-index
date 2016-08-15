@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>海外商家需求</title>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="css/main.min.css" />
+		<!-- <script type="text/javascript" src="./js/iscroll.js"></script> -->
+		<script type="text/javascript" src="./js/main.min.js"></script>
+	</head>
+
+	<body onload="">
+		<div id="main" class="main">
+				<div id="wrapper" class="wrapper">
+					<nav id="scroller" class="header">
+						<ul>
+							<li class="on" for="order_list">全部商家</li>
+							<li for="untransorders">综合百货</li>
+							<li for="">服饰鞋包</li>
+							<li for="">母婴保健</li>
+							<li for="">美妆护肤</li>
+							<li for="">户外运动</li>
+							<li for="">钟表饰品</li>
+						</ul>
+					</nav>
+				</div>
+			<section class="business-main" id="business-main">
+				<div class="description-box">
+					点击进入官网，找到想买的商品后，将商品链接复制并发至公众号“六城猎人”即可下单。
+				</div>
+				<ul class="business-u">
+					<li>
+						<a href="">
+							<img src="./images/1.jpg" alt="">
+							<div class="business-info">
+								<p class="p1">eBay</p>
+								<p class="p2">www.eBay.com</p>
+								<p class="p3">美国的淘宝，和全球卖家做交易</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="./images/1.jpg" alt="">
+							<div class="business-info">
+								<p class="p1">eBay</p>
+								<p class="p2">www.eBay.com</p>
+								<p class="p3">美国的淘宝，和全球卖家做交易</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="./images/1.jpg" alt="">
+							<div class="business-info">
+								<p class="p1">eBay</p>
+								<p class="p2">www.eBay.com</p>
+								<p class="p3">美国的淘宝，和全球卖家做交易</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="./images/1.jpg" alt="">
+							<div class="business-info">
+								<p class="p1">eBay</p>
+								<p class="p2">www.eBay.com</p>
+								<p class="p3">美国的淘宝，和全球卖家做交易</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="./images/1.jpg" alt="">
+							<div class="business-info">
+								<p class="p1">eBay</p>
+								<p class="p2">www.eBay.com</p>
+								<p class="p3">美国的淘宝，和全球卖家做交易</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="more-box">
+            <span class="more-text">更多商家，即将接入</span>
+        </div>
+			</section>
+		</div>
+		<script type="text/javascript">
+
+
+
+		// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		// document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+
+
+			$(".header li").on("tap", function() {
+				var _t = $(this),
+						_index = _t.index();
+
+				if (_t.hasClass("on")) {
+					return;
+				} else {
+					var orderstatus = _t.attr("for");
+					_t.addClass("on").siblings().removeClass("on");
+					var _tL = _t.offset().left;
+					var wW = $(window).width();
+					console.log(_tL);
+					console.log(wW);
+				}
+
+			});
+
+
+		</script>
+	</body>
+
+</html>

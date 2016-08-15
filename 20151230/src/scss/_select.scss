@@ -1,0 +1,54 @@
+.plselect-container {
+	position:absolute;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	&>li {
+		padding:0;
+		&.plselect-group label {
+			margin:0;
+			padding:3px 20px 3px 20px;
+			height:100%;
+			font-weight:700
+		}
+		&.plselect-group-clickable label {
+			cursor:pointer
+		}
+		&>a {
+			padding:0;
+			&.plselect-all label {
+				font-weight:700
+			}
+			&>label {
+				margin:0;
+				height:100%;
+				cursor:pointer;
+				font-weight:400;
+				padding:3px 20px 3px 40px;
+				&.radio,&.checkbox {
+					margin:0
+				}
+				&>input[type=checkbox] {
+					margin-bottom:5px
+				}
+			}
+			
+		}
+		
+	}
+	.input-group {
+		margin:5px;
+	}
+}
+
+.btn-group>.btn-group:nth-child(2)>.plselect.btn {
+	border-top-left-radius:4px;
+	border-bottom-left-radius:4px
+}
+.form-inline .plselect-container label.checkbox,.form-inline .plselect-container label.radio {
+	padding:3px 20px 3px 40px
+}
+.form-inline .plselect-container li a label.checkbox input[type=checkbox],.form-inline .plselect-container li a label.radio input[type=radio] {
+	margin-left:-20px;
+	margin-right:0
+}

@@ -1,0 +1,12 @@
+.banner-bg{
+    width: pxTorem(720);
+    height: pxTorem(504);
+    background: url(../images/banner-bg.png) no-repeat;
+    background-size: contain;
+    .banner{
+        width: pxTorem(720);
+        height: pxTorem(504);
+        background: url(../images/banner.png) no-repeat;
+        background-size: contain;
+    }
+}

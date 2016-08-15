@@ -1,0 +1,100 @@
+.jiugong-wrap{
+    padding: pxTorem(20);
+    
+    height: pxTorem(560);
+    
+}
+.jiugong-bg{
+    background: #ff403b;
+    height: pxTorem(553);
+    overflow: hidden;
+    border-radius: 16px;
+    background: url(../images/gongge-bg.png) no-repeat;
+    background-size: contain;
+    // border-bottom: pxTorem(16) solid #d70015;
+}
+.jiugong{
+    padding: pxTorem(30);
+    ul{
+        display: block;
+        display:table;  /* 调教webkit*/
+        word-spacing:-1em;
+        padding-top: pxTorem(5.6);
+        padding-left: pxTorem(5);
+        li{
+            display: inline-block;
+            overflow: hidden;
+            width: pxTorem(200);
+            height: pxTorem(152);
+            background: #ffbfbe url(../images/panli-m.png) no-repeat;
+            background-size: pxTorem(200) pxTorem(140);
+            word-spacing:0;
+            font-size: 0;
+            border-radius: pxTorem(16);
+            margin:0 pxTorem(2);
+            text-align: center;
+            span{
+                margin-top: pxTorem(18);
+                display: inline-block;
+                width: pxTorem(190);
+                height: pxTorem(106);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            &.current{
+                background-image:  none;
+                
+            }
+            &.li1{
+                span{
+                    background-image: url(../images/pan33.png);
+                }
+            }
+            &.li2{
+                span{
+                    background-image: url(../images/pan0.png);
+                }
+            }
+            &.li3{
+                span{
+                    background-image: url(../images/pan44.png);
+                }
+            }
+            &.li8{
+                span{
+                    background-image: url(../images/pan11.png);
+                }
+            }
+            &.li9{
+                background-image: url(../images/pan99.png);
+                background-color: #e58e01;
+                span{
+                    // background-image: url(../images/pan99.png);
+                }
+            }
+            &.li4{
+                span{
+                    background-image: url(../images/pan22.png);
+                }
+            }
+            &.li7{
+                span{
+                    background-image: url(../images/pan66.png);
+                }
+            }
+            &.li6{
+                span{
+                    background-image: url(../images/pan77.png);
+                }
+            }
+            &.li5{
+                span{
+                    background-image: url(../images/pan55.png);
+                }
+            }
+           
+            
+        }
+    }
+}

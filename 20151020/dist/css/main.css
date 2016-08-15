@@ -1,0 +1,199 @@
+@charset "UTF-8";
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  display: block; }
+
+.clear {
+  clear: both;
+  overflow: hidden; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.z-w {
+  width: 966px;
+  margin: 0 auto; }
+
+.activity-main {
+  overflow: hidden; }
+
+#frame, .z-floor-nav {
+  font: 14px / 1.42857 "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #frame h5, .z-floor-nav h5 {
+    font-weight: 400; }
+  #frame p, .z-floor-nav p {
+    font-weight: 400; }
+
+.type4 {
+  position: relative; }
+
+.phoneAnmi {
+  position: absolute;
+  left: 0;
+  width: 500px; }
+
+.floor-4 {
+  height: 711px;
+  position: relative; }
+  .floor-4 .floor-text {
+    width: 563px;
+    height: 147px;
+    left: 0;
+    top: 50%;
+    margin-top: -74px;
+    background: url(./images/floor-4-text.png) no-repeat; }
+  .floor-4 .floor-4-anmi {
+    width: 510px;
+    height: 600px;
+    right: 0;
+    top: 70px; }
+  .floor-4 .floor-text, .floor-4 .floor-phone, .floor-4 .floor-4-anmi, .floor-4 .floor-4-1, .floor-4 .floor-4-2, .floor-4 .floor-4-3, .floor-4 .floor-4-4 {
+    position: absolute; }
+  .floor-4 .floor-phone {
+    width: 272px;
+    height: 551px;
+    left: 50%;
+    margin-left: -136px;
+    background: url(./images/floor-4-phone.png) no-repeat;
+    z-index: 0; }
+  .floor-4 .floor-4-1 {
+    left: 48px;
+    top: 174px;
+    width: 105px;
+    height: 105px;
+    background: url(./images/floor-4-1.png) no-repeat center;
+    z-index: 2;
+    opacity: 0; }
+  .floor-4 .floor-4-2 {
+    left: 260px;
+    top: 93px;
+    width: 230px;
+    height: 48px;
+    background: url(./images/floor-4-2.png) no-repeat center;
+    z-index: 2;
+    opacity: 0; }
+  .floor-4 .floor-4-3 {
+    left: 14px;
+    top: 380px;
+    width: 230px;
+    height: 63px;
+    background: url(./images/floor-4-3.png) no-repeat center;
+    z-index: 2;
+    opacity: 0; }
+  .floor-4 .floor-4-4 {
+    left: 350px;
+    top: 315px;
+    width: 126px;
+    height: 65px;
+    background: url(./images/floor-4-4.png) no-repeat center;
+    z-index: 2;
+    opacity: 0; }
+
+@keyframes avatar {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes avatar {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+.scroll .floor-4-1-anmi {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation: avatar 1000ms ease 0ms 1 forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  -webkit-animation-play-state: initial;
+  -webkit-animation-name: avatar;
+  animation-name: avatar; }
+
+.scroll .floor-4-2-anmi {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation: avatar 1000ms ease 300ms 1 forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  -webkit-animation-play-state: initial;
+  -webkit-animation-name: avatar;
+  animation-name: avatar; }
+
+.scroll .floor-4-3-anmi {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation: avatar 1000ms ease 600ms 1 forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  -webkit-animation-play-state: initial;
+  -webkit-animation-name: avatar;
+  animation-name: avatar; }
+
+.scroll .floor-4-4-anmi {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation: avatar 1000ms ease 900ms 1 forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  -webkit-animation-play-state: initial;
+  -webkit-animation-name: avatar;
+  animation-name: avatar; }

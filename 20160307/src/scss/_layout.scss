@@ -1,0 +1,60 @@
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+
+
+@mixin px2rem($property,$px-values,$baseline-px:16px,$support-for-ie:false){
+//Conver the baseline into rems
+$baseline-rem: $baseline-px / 1rem * 1;
+//Print the first line in pixel values
+@if $support-for-ie {
+    #{$property}: $px-values;
+}
+//if there is only one (numeric) value, return the property/value line for it.
+@if type-of($px-values) == "number"{
+    #{$property}: $px-values / $baseline-rem;
+}
+@else {
+    //Create an empty list that we can dump values into
+    $rem-values:();
+    @each $value in $px-values{
+        // If the value is zero or not a number, return it
+        @if $value == 0 or type-of($value) != "number"{
+            $rem-values: append($rem-values, $value / $baseline-rem);
+        }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values;
+}
+}
+
+$browser-default-font-size:72;
+
+@function pxTorem($px){//$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+@mixin backImg($src){
+    background-repeat: no-repeat;
+    background-image: url($src);
+    background-size: contain;
+}
+
+.main-page{
+    padding-bottom: 20px;
+    background: #653aa9;
+    color: #FFF;
+    // font-family: Tahoma,Arial,"Helvetica Neue","Hiragino Sans GB",Simsun,sans-self; 
+    // Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+.footer{
+    margin-top: 0;
+}

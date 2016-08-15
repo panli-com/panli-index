@@ -1,0 +1,110 @@
+﻿$axure.loadCurrentPage({
+  "url":"【调整】交易流水号查询.html",
+  "generationDate":new Date(1444807110999.7),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"27fe97744a75473f85a26b10728182e8",
+    "type":"Axure:Page",
+    "name":"【调整】交易流水号查询",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"6209fe0669ee45aeb8a9961a5c133bbe",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "size":{
+              "width":1294,
+              "height":387}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"8efbd37ebfac4cf6b1bbc5ac6e3852ec",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "size":{
+                  "width":1294,
+                  "height":387}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/【调整】交易流水号查询/u0.png"}},
+{
+          "id":"ad10d50df46346bf92f82724f6f3ff00",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "horizontalAlignment":"left",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF99},
+            "location":{
+              "x":180,
+              "y":410},
+            "size":{
+              "width":320,
+              "height":60}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"efeca03937454501a548020772ce5a34",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "horizontalAlignment":"left",
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF99},
+                "location":{
+                  "x":180,
+                  "y":410},
+                "size":{
+                  "width":320,
+                  "height":60}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/【调整】交易流水号查询/u2.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "6209fe0669ee45aeb8a9961a5c133bbe":{
+      "scriptId":"u0"},
+    "8efbd37ebfac4cf6b1bbc5ac6e3852ec":{
+      "scriptId":"u1"},
+    "ad10d50df46346bf92f82724f6f3ff00":{
+      "scriptId":"u2"},
+    "efeca03937454501a548020772ce5a34":{
+      "scriptId":"u3"}}});

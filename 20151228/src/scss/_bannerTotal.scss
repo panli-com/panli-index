@@ -1,0 +1,21 @@
+.banner-all-sp{
+	position: relative;
+	.wrap-banner{
+		width: 940px;
+		height: 292px;
+		overflow: hidden;
+	}
+	
+	.wrap-banner-sml{
+		position: absolute;
+		width: 250px;
+		right: 0;
+		top: 0;
+		overflow: hidden;
+		.sml-banner{
+			width: 250px;
+			height: 140px;
+			margin-bottom: 10px;
+		}
+	}
+}

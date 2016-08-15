@@ -1,0 +1,32 @@
+{
+    "name": "panli-index",
+    "version": "1.0.0",
+    "description": "",
+    "main": "pan.js",
+    "scripts": {
+        "start": "gulp",
+        "pro": "gulp pro"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "bower": "^1.5.3",
+        "browser-sync": "^2.9.11",
+        "gulp": "^3.9.0",
+        "gulp-autoprefixer": "^3.0.1",
+        "gulp-concat": "^2.6.0",
+        "gulp-connect": "^2.2.0",
+        "gulp-minify-css": "^1.2.1",
+        "gulp-notify": "^2.2.0",
+        "gulp-postcss": "^6.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.0.4",
+        "gulp-uglify": "^1.4.1",
+        "gulp-zip": "^3.0.2",
+        "uglify-save-license": "^0.4.1"
+    },
+    "dependencies": {
+        "gulp": "^3.9.1",
+        "gulp-sass": "^2.2.0"
+    }
+}

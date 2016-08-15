@@ -1,0 +1,86 @@
+.dual-october-wrap{
+    width: 383px;   
+    display: inline-block;
+    position: relative;
+    height: 50px;
+}
+.dual-october-wrap a{
+  display:block;
+  padding: 0;
+  font-size: 0;
+  position: relative;
+  text-decoration: none;
+}
+.dual-october-wrap a img{
+  padding: 0;
+  margin: 0
+}
+.dual-october-time-1,.dual-october-time-2{
+  position: absolute;
+  width: 200px;
+  height: 48px;
+  top: 2px;
+  left: 158px;  
+}
+#dual-october-time{
+    opacity:0.1;
+}
+.dual-october-time-1{
+  background: url(../images/day.png) no-repeat;
+}
+.dual-october-time-2{
+  background: url(../images/that-day.png) no-repeat;
+}
+.dual-text-time{
+  font-size: 18px;
+  position: absolute;
+  top: 16px;
+  height: 30px;
+  left: 15px;
+  bottom: 16px;
+  color: #fd6f6e;
+  /*z-index: 2;*/
+ 
+}
+.dual-october-time-2 .dual-text-time{
+  left: 0;
+}
+.time-hour,.time-minute,.time-second,.time-day{
+  position: absolute;
+  width: 30px;
+  height: 26px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+}
+.time-hour{
+  left: 14px;
+}
+.time-minute{
+  left: 70px;
+}
+.time-second{
+  left: 123px;
+}
+.time-day{
+  left: 54px;
+}
+.hammer-wrap{
+  position: absolute;
+  width: 135px;
+  height: 41px;
+  top: 6px;
+  left: 158px;  
+  background: url(../images/hammer.png) no-repeat;
+  /*z-index: 2;*/
+  
+  margin-top: -70px;
+  transition:2s;
+  transform:rotate(7deg);
+  /*-ms-transform:rotate(7deg); 	
+  -moz-transform:rotate(7deg); 
+  -webkit-transform:rotate(7deg); 
+  -o-transform:rotate(7deg); */
+}

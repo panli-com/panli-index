@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>select</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="./build/css/main.min.css" type="text/css">  
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./build/js/main.min.js"></script>        
+    </head>
+    <body>
+        <form action="" method="get">
+        <div class="app" style="padding-left:40px;">
+        <div class="">
+            <h1>下拉框多选查询</h1>
+        </div>
+               
+        <br/>
+        <br/>
+        <select class="plselect" multiple="multiple" name="s1">
+            <option value="苹果">苹果</option>
+            <option value="香蕉" selected>香蕉</option>
+            <option value="橘子">橘子</option>
+            <option value="芒果">芒果</option>
+            <option value="荔枝">荔枝</option>
+            <option value="西瓜">西瓜</option>
+        </select>
+        <br/>
+        <br/>
+        <br/>
+       
+       
+        <select class="plselect2" multiple="multiple" name="s2">
+           
+        </select>
+         <button class="btn">提交</button>
+        </form>
+        
+        </div>
+        
+        </div>
+        
+	</body>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('.plselect').plselect({
+                
+                buttonWidth: 'auto',
+                
+                filterPlaceholder: '搜索',               
+                maxHeight: false,
+                buttonText: function(options) {
+                    
+                    for(var i=0;i<options.length;i++){
+                          console.log(options[i])
+                    }
+                  
+                if (options.length == 0) {
+                return '请选择';
+                }
+                else if (options.length > 3) {
+                    
+                }
+                else {
+                    var selected = '';
+                    options.each(function() {
+                    selected += $(this).text() + ', ';
+                    });
+                        return selected.substr(0, selected.length -2) + ' ';
+                    }
+                }
+            });
+            
+            var opt = '';
+            for (var j = 0; j < 100; j++) {
+                
+                opt += '<option value="苹果'+ j +'">苹果'+ j +'</option>';
+                
+            }
+            
+            $(".plselect2").html(opt);
+            
+             $('.plselect2').plselect({
+                    maxHeight: 300,
+                    includeSelectAllOption: true,
+                    filterPlaceholder: '搜索',
+                    enableFiltering: true,
+                    selectAllText: '选择所有',
+                   
+                    onChange: function(option, checked) {
+                        
+                        //console.log(JSON.stringify($(this)) + ' options ' + (checked ? 'selected' : 'deselected'));
+                    },
+                    buttonText: function(options) {
+                            if (options.length == 0) {
+                                return '请选择';
+                            }
+                            else if (options.length > 3) {
+                                
+                            }
+                            else {
+                                var selected = '';
+                                options.each(function() {
+                                selected += $(this).text() + ', ';
+                                });
+                                    return selected.substr(0, selected.length -2) + ' ';
+                                }
+                    },
+                    buttonTitle:function(options){
+                        
+                    }
+                });
+            
+        });
+        </script>
+	</html>

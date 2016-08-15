@@ -1,0 +1,95 @@
+@keyframes avatar{
+  0%{opacity:0;-webkit-transform:scale(1.3);transform:scale(1.3)}
+  100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}
+}
+@-webkit-keyframes avatar{
+  0%{
+    opacity:0;
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3)
+  }
+  100%{
+    opacity:1;
+    -webkit-transform:scale(1);
+    transform:scale(1)
+  }
+}
+
+.scroll .floor-4-1-anmi {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation: avatar 1000ms ease 0ms 1 forwards;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: initial;
+  animation-direction: initial;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  -webkit-animation-play-state: initial;
+  -webkit-animation-name: avatar;
+  animation-name: avatar;
+}
+.scroll .floor-4-2-anmi {
+	-webkit-animation-duration: 1000ms;
+	animation-duration: 1000ms;
+	-webkit-animation: avatar 1000ms ease 300ms 1 forwards;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+	-webkit-animation-delay: 300ms;
+	animation-delay: 300ms;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	-webkit-animation-direction: initial;
+	animation-direction: initial;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+	-webkit-animation-play-state: initial;
+	-webkit-animation-name: avatar;
+	animation-name: avatar;
+}
+
+.scroll .floor-4-3-anmi {
+	-webkit-animation-duration: 1000ms;
+	animation-duration: 1000ms;
+	-webkit-animation: avatar 1000ms ease 600ms 1 forwards;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+	-webkit-animation-delay: 600ms;
+	animation-delay: 600ms;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	-webkit-animation-direction: initial;
+	animation-direction: initial;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+	-webkit-animation-play-state: initial;
+	-webkit-animation-name: avatar;
+	animation-name: avatar;
+}
+
+.scroll .floor-4-4-anmi{
+	-webkit-animation-duration: 1000ms;
+	animation-duration: 1000ms;
+	-webkit-animation: avatar 1000ms ease 900ms 1 forwards;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+	-webkit-animation-delay: 900ms;
+	animation-delay: 900ms;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	-webkit-animation-direction: initial;
+	animation-direction: initial;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+	-webkit-animation-play-state: initial;
+	-webkit-animation-name: avatar;
+	animation-name: avatar;
+}

@@ -1,0 +1,52 @@
+@mixin floorWal($l,$t,$w,$h,$img) {
+  left: $l;
+  top: $t;
+  width: $w;
+  height: $h;
+  background: url(./images/#{$img}) no-repeat center;
+  z-index: 2;
+  opacity: 0;
+}
+
+.floor-4{
+  height: 711px;
+  position: relative;
+  .floor-text{
+    width: 563px;
+    height: 147px;
+    left: 0;
+    top: 50%;
+    margin-top: -74px;
+    background: url(./images/floor-4-text.png) no-repeat;
+  }
+  .floor-4-anmi{
+    width: 510px;
+    height: 600px;
+    right: 0;
+    top: 70px;
+    //background-color: rgb(19, 158, 151);
+  }
+  .floor-text,.floor-phone,.floor-4-anmi,.floor-4-1,.floor-4-2,.floor-4-3,.floor-4-4{
+    position: absolute;
+  }
+  .floor-phone{
+    width: 272px;
+    height: 551px;
+    left: 50%;
+    margin-left: -136px;
+    background: url(./images/floor-4-phone.png) no-repeat;
+    z-index: 0;
+  }
+  .floor-4-1{
+    @include floorWal(48px,174px,105px,105px,'floor-4-1.png');
+  }
+  .floor-4-2{
+    @include floorWal(260px,93px,230px,48px,'floor-4-2.png');
+  }
+  .floor-4-3{
+    @include floorWal(14px,380px,230px,63px,'floor-4-3.png');
+  }
+  .floor-4-4{
+    @include floorWal(350px,315px,126px,65px,'floor-4-4.png');
+  }
+}
