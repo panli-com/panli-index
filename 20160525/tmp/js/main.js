@@ -372,8 +372,6 @@ function removeDown(){
 ;(function(){
     
     PD(function(){
-        
-        
     
     if (!supportCss3('transform')) {
         document.body.className += 'no_transform'
@@ -383,8 +381,8 @@ function removeDown(){
            errerText = '您输入的链接地址不正确，请核实后再填写！';
            
            
-    $('#topSearch').on('click', function () {
-        var $input = $(this).prevAll('input'),
+    PD('#topSearch').on('click', function () {
+        var $input = PD(this).prevAll('input'),
                 url = $.trim($input.val());
         if (urlRel.test(url)) {
             if (url.indexOf("http://") < 0 && url.indexOf("https://") < 0)
@@ -398,15 +396,15 @@ function removeDown(){
     }); 
     
     
-    $('#headSearch').on('click', function () {
-        var $input = $(this).prevAll('input'),
+    PD('#headSearch').on('click', function () {
+        var $input = PD(this).prevAll('input'),
                 url = $.trim($input.val());
         if (urlRel.test(url)) {
             if (url.indexOf("http://") < 0 && url.indexOf("https://") < 0)
                 url = "http://" + url;
             url = url.replace(/&#/gi, '&'); //特殊地址报错
             
-           var urV = $(".tab-sel-clk").attr("data-val");
+           var urV = PD(".tab-sel-clk").attr("data-val");
            
            var urlFe = ["","http://www.panli.com/Crawler.aspx?purl=","http://www.panli.com/mypanli/SelfPurchase/Order.aspx?szURL="]
             
@@ -419,84 +417,215 @@ function removeDown(){
     }); 
 
 
-    $('.search input').on({ '  ': function () {
-            if ($(this).hasClass('red')) {
-                $(this).removeClass('red').val('');
+    PD('.search input').on({ '  ': function () {
+            if (PD(this).hasClass('red')) {
+                PD(this).removeClass('red').val('');
             }
         },
             'click': function (e) {
-                if ($(this).hasClass('red')) {
-                    $(this).removeClass('red').val('');
+                if (PD(this).hasClass('red')) {
+                    PD(this).removeClass('red').val('');
                 }
             },
             'keyup': function (e) {
                 if (e.keyCode == 13) {
-                    $(this).next().click();
+                    PD(this).next().click();
                     return false;
                 }
             }
     });
 
 
-    new hover($('*[data-hover]'));
+    new hover(PD('*[data-hover]'));
  
-    $('#r_download').hover(function () {
-        $('.icon_code_h', this).show();
-        $('.icon_code_p', this).animate({ left: 0 }, 300);
+    PD('#r_download').hover(function () {
+        PD('.icon_code_h', this).show();
+        PD('.icon_code_p', this).animate({ left: 0 }, 300);
     }, function () {
         var _this = this;
-        $('.icon_code_p', this).animate({ left: '121px' }, 300, function () {
-            $('.icon_code_h', _this).hide();
+        PD('.icon_code_p', this).animate({ left: '121px' }, 300, function () {
+            PD('.icon_code_h', _this).hide();
         });
     }); 
 
-    $("#nav_list").on("click","li",function(){
-
-                $(".ripple").remove();
-
-
-                var posX = $(this).offset().left,
-                posY = $(this).offset().top,
-                buttonWidth = $(this).width(),
-                buttonHeight = $(this).height();
-
-                $(this).prepend("<span class='ripple'></span>");
-
-
-                if (buttonWidth >= buttonHeight) {
-                    buttonHeight = buttonWidth;
-                } else {
-                    buttonWidth = buttonHeight;
-                }
-
-                var x = e.pageX - posX - buttonWidth / 2;
-                var y = e.pageY - posY - buttonHeight / 2;
-
-
-                $(".ripple").css({
-                    width: buttonWidth,
-                    height: buttonHeight,
-                    top: y + 'px',
-                    left: x + 'px'
-                }).addClass("rippleEffect");
-
-    });
-
-    $("#nav_list").on("click","a",function(){
-
-                
-        return false;
-    });
-
-
-
    })
     
-    
-    
-})()
+})();
 
 
 
 
 
+
+;(function(PD, window, document, undefined) {
+    function Rippleria(element, options) {
+        this.$element = PD(element);
+        this.options = PD.extend({}, Rippleria.Defaults, this._getOptionsFromElementAttributes(), options);
+
+        this._prepare();
+        this._bind();
+    }
+
+    Rippleria.prototype._bind = function() { 
+        var elem = this.$element,
+            options = this.options,
+            ink, d, x, y, isTouchSupported, eventType;
+
+        isTouchSupported = 'ontouchend' in window || window.DocumentTouch && document instanceof DocumentTouch;
+
+        eventType = isTouchSupported == true ? 'touchend.ripplems' : 'click.ripplems';
+
+        this.$element.bind(eventType, function(e) {
+            var ink = PD("<div class='ripplems-ink'/>");
+            elem.append(ink);
+
+            if (options.color != undefined) {
+                ink.css('background-color', options.color);
+            }
+
+            var animation = 'ripplems ' + options.duration / 1000 + 's ' + options.easing;
+
+            ink.css('animation', animation);
+            ink.css('-webkit-animation', animation);
+
+            setTimeout(function() {
+                ink.remove();
+            }, parseFloat(options.duration));
+
+            if(!ink.height() && !ink.width()) {
+                d = Math.max(elem.outerWidth(), elem.outerHeight());
+                ink.css({height: d, width: d});
+            }
+
+            if (isTouchSupported == true) {
+                var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                x = touch.pageX - elem.offset().left - ink.width() / 2;
+                y = touch.pageY - elem.offset().top - ink.height() / 2;
+            } else {
+                x = e.pageX - elem.offset().left - ink.width() / 2;
+                y = e.pageY - elem.offset().top - ink.height() / 2;
+            }
+
+            ink.css({top: y + 'px', left: x + 'px'});
+        });
+    };
+
+    Rippleria.prototype._prepare = function() {
+        var elem = this.$element;
+
+        if (elem.css('position') == 'static') {
+            elem.css('position', 'relative');
+        }
+
+        elem.css('overflow', 'hidden');
+
+        if(elem.find('img')[0] != undefined) {
+            elem.on('dragstart', function(e) { e.preventDefault(); });
+        }
+
+        if(this.options.detectBrightness) {
+            var r,g,b,brightness,
+                colour = this.$element.css("background-color");
+
+            if(colour == 'transparent') {
+                var getParentBackground = function(elem) {
+                    var colour = elem.css("background-color");
+
+                    if(elem.length != 0) {
+                        if(colour == 'transparent') {
+                            return getParentBackground(elem.parent());
+                        }
+                    }
+
+                    return colour;
+                };
+
+                colour = getParentBackground(this.$element.parent());
+            }
+
+            if (colour.match(/^rgba/)) {
+                colour = colour.match(/rgba\(([^)]+)\)/)[1];
+
+                colour = colour.split(/ *, */).map(Number);
+                r = colour[0];
+                g = colour[1];
+                b = colour[2];
+            } else if (colour.match(/^rgb/)) {
+                colour = colour.match(/rgb\(([^)]+)\)/)[1];
+                colour = colour.split(/ *, */).map(Number);
+                r = colour[0];
+                g = colour[1];
+                b = colour[2];
+            } else if ('#' == colour[0] && 7 == colour.length) {
+                r = parseInt(colour.slice(1, 3), 16);
+                g = parseInt(colour.slice(3, 5), 16);
+                b = parseInt(colour.slice(5, 7), 16);
+            } else if ('#' == colour[0] && 4 == colour.length) {
+                r = parseInt(colour[1] + colour[1], 16);
+                g = parseInt(colour[2] + colour[2], 16);
+                b = parseInt(colour[3] + colour[3], 16);
+            }
+
+            brightness = (r * 299 + g * 587 + b * 114) / 1000;
+
+            if (brightness > 150) {
+                this.$element.addClass("ripplems-dark");
+            }
+        }
+    };
+
+    Rippleria.prototype._getOptionsFromElementAttributes = function() {
+        var base = this;
+        attrs = {};
+
+        PD.each(Rippleria.Defaults, function(option, val) {
+            var attr = base.$element.attr('ju-ripplems-' + option);
+            if (attr != null) {
+                attrs[option] = attr;
+            }
+        });
+
+        return attrs;
+    };
+
+    Rippleria.prototype.changeColor = function(color) {
+        this.options.color = color;
+    };
+
+    Rippleria.prototype.changeEasing = function(easing) {
+        this.options.easing = easing;
+    };
+
+    Rippleria.prototype.changeDuration = function(duration) {
+        this.options.duration = duration;
+    };
+
+    Rippleria.Defaults = {
+        duration: 750,
+        easing: 'linear',
+        color: undefined,
+        detectBrightness: true
+    };
+
+    PD.fn.ripplems = function(option) { 
+        var args = Array.prototype.slice.call(arguments, 1);
+
+        return this.each(function() {
+            var $this = PD(this),
+                data = $this.data('ripplems');
+
+            if (!data) {
+                data = new Rippleria(this, typeof option == 'object' && option);
+                $this.data('ripplems', data);
+            }
+
+            if (typeof option == 'string' && option.charAt(0) !== '_') {
+                data[option].apply(data, args);
+            }
+        });
+    };
+
+    PD(function() {
+        PD('[ju-ripplems]').ripplems();
+    });
+})(window.PD, window, document);
