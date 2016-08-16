@@ -62,7 +62,7 @@ gulp.task('sass', () => gulp.src(`./${day}/src/scss/${cssName}.scss`)
 
 gulp.task('scripts',() => gulp.src(`./${day}/src/js/*.js`)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(`./${day}/tmp/js`))
+    .pipe(gulp.dest(`./${day}/.tmp/js`))
     .pipe(rename(minjs))
     .pipe(uglify())
     .pipe(header(banner, { pkg }))
