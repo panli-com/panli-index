@@ -1,0 +1,15 @@
+.double-logo-wrap {
+  overflow: initial;
+  width: 380px; }
+  .double-logo-wrap .double-logo-content {
+    position: absolute;
+    width: 225px;
+    height: 92px;
+    left: 154px;
+    top: -25px;
+    background-repeat: no-repeat;
+    background-position: left center; }
+    .double-logo-wrap .double-logo-content.one-src {
+      background-image: url(../imgs/double11.gif); }
+    .double-logo-wrap .double-logo-content.time-src {
+      background-image: url(../imgs/time.png); }

@@ -1,7 +1,21 @@
 
 
-const day = '20160525';
-const cssName = 'main', minjs   = 'head_2016.js';
+import conf    from './config.json';
+
+
+const day           = conf.start;
+const title         = conf[day].title;
+const description   = conf[day].description;
+const keywords      = conf[day].keywords;
+const author        = conf[day].author;
+const version       = conf[day].version;
+const mincss        = conf[day].build.css;
+const minjs         = conf[day].build.js;
+
+let cssLoadSrc = conf[day].load.css;
+let jsLoadSrc  = conf[day].load.js;
+let csssrc = `./${day}/src/scss/main.scss`;
+let jssrc = `./${day}/src/js/*.js`;
 
 import pkg          from './package.json';
 import gulp         from 'gulp';
@@ -26,33 +40,39 @@ const reload      = browserSync.reload;
 
 
 const banner = [
-    '/*! ',
-    '<%= pkg.app %> ',
-    'v<%= pkg.version %> | ',
-    `(c) ${new Date()} <%= pkg.homepage %> |`,
-    ' <%= pkg.author %>',
-    ' */',
-    '\n'
+  '/*! ',
+    '<%= pkg.name %> ',
+    `v ${version}  | `,
+    `(c) ${new Date()}  ${author}  |`,
+    ' <%= pkg.homepage %> ',
+    ` ${title}`,
+  ' */',
+  '\n'
 ].join('');
 
 
 gulp.task('ejs', () => gulp.src(`./${day}/templates/layout.ejs`)
     .pipe(ejs({
-        title: pkg.app,
+        title: title,
+        mincss: mincss,
+        minjs:minjs,
         time: new Date().getTime()
     }))
-    .pipe(gulp.dest(`./${day}/.tmp`))
+    .pipe(gulp.dest(`./${day}/.__tmp`))
     .pipe(rename('index.html'))
     .pipe(gulp.dest(`./${day}/`))
     .pipe(reload({ stream: true }))
     .pipe(notify({ message: 'ejs task complete' })))
 
 //编译Sass，Autoprefix及缩小化
-gulp.task('sass', () => gulp.src(`./${day}/src/scss/${cssName}.scss`)
-    .pipe(sass({ style: 'expanded' }))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest(`./${day}/.tmp/css`))
-    .pipe(rename({suffix: '.min'}))
+gulp.task('sass', () => gulp.src(cssLoadSrc)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['> 1%','Firefox <= 20',''],
+        cascade: false
+    }))
+    .pipe(gulp.dest(`./${day}/.__tmp/css`))
+    .pipe(rename(mincss))
     .pipe(minifycss())
     .pipe(header(banner, { pkg }))
     .pipe(gulp.dest(`./${day}/build/css/`))
@@ -60,9 +80,9 @@ gulp.task('sass', () => gulp.src(`./${day}/src/scss/${cssName}.scss`)
     .pipe(notify({ message: 'Styles  task complete' })));
 
 
-gulp.task('scripts',() => gulp.src(`./${day}/src/js/*.js`)
+gulp.task('scripts',() => gulp.src(jsLoadSrc)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(`./${day}/.tmp/js`))
+    .pipe(gulp.dest(`./${day}/.__tmp/js`))
     .pipe(rename(minjs))
     .pipe(uglify())
     .pipe(header(banner, { pkg }))
