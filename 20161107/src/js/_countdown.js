@@ -76,7 +76,7 @@
                 var vm = this;
                 var elm = PD(".double-logo-content");
                 elm.addClass("one-src");
-                var gifsrc = PanLiNodeInfo.double.logo[0];
+                var gifsrc = PanLiNodeInfo.double.logo[0] + '?v='+ new Date().getTime();
                 var stc = '<img class="double-logo-gif" src="'+ gifsrc +'" alt="">';
                 elm.html(stc);
                 vm.isCreatOne = 2;

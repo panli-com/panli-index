@@ -17,15 +17,26 @@
 <link type="text/css" rel="stylesheet" href="http://sf.panli.com/FrontEnd/css20090801/Gobal/Track.css" />
 <link rel="stylesheet" href="./build/css/logo.double.11.css">
 <script type="text/javascript">
-    var PanLiNodeInfo = {
-        time: "1478506194",
-        doubleTimeStart:"2016/11/11 00:00:00",
-        doubleTimeEnd:"2016/11/12 00:00:00",
-        doubleLogo:[
-            './build/imgs/double11.gif',
-            './build/imgs/time.png'
+var PanLiNodeInfo = {
+    time: "1478581773",
+    double:{
+      startTime:"2016/11/08 00:00:00", 
+      endTime:"2016/11/09 00:00:00",
+      logo:[
+        './build/imgs/double11.gif',
+        './build/imgs/time.png'
         ]
-    };
+    }
+};
+PD(function () {
+    var dob = PanLiNodeInfo.double;
+    var obj = {
+        nowTime:new Date(PanLiNodeInfo.time*1000).getTime(),
+        startTime:new Date(dob.startTime).getTime(),
+        endTime:new Date(dob.endTime).getTime()
+    }
+    doubleAction.init(obj);
+});
 </script>
 </head>
 <div style="display:none">
@@ -123,6 +134,7 @@
         <div class="logo-wrap logo double-logo-wrap" id="el-double-logo">
             <a href="http://www.panli.com"><img src="./build/imgs/logo-3.png" data-double-src="./build/imgs/logo-3.png" data-src="http://sf.panli.com/Ued/Pc/index/build/images/logo.png" alt="panli logo" class="logo-img"></a>
             <div class="double-logo-content">
+                <img class="double-logo-gif" src="./build/imgs/double11.gif" alt="">
             </div>
         </div>
 

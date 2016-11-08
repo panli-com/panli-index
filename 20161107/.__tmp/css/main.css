@@ -103,11 +103,13 @@
     width: 225px;
     height: 90px;
     left: 154px;
-    top: -20px;
+    top: -25px;
     background-repeat: no-repeat;
     background-position: left center; }
     .double-logo-wrap .double-logo-content.time-src {
       background-image: url(../imgs/time.png); }
+    .double-logo-wrap .double-logo-content .double-logo-gif {
+      position: absolute; }
 
 .double-time-box {
   position: absolute;

@@ -10,7 +10,7 @@
         width: 225px;
         height: 90px;
         left: 154px; 
-        top: -20px;
+        top: -25px;
         background-repeat: no-repeat;
         background-position: left center;
         &.one-src{       
@@ -19,7 +19,10 @@
         &.time-src{
             background-image: url(../imgs/time.png)
         }
-        
+        .double-logo-gif{
+            position: absolute; 
+            // top: -px; 
+        }
     }
 }
 .double-time-box{
