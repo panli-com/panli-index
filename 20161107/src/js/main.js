@@ -6,6 +6,5 @@
  */
 ;(function () {
     PD(function () {
-      
-    })
+    });
 })()

@@ -28,7 +28,3 @@ function preloadimages(arr){
         }
     }
 }
-preloadimages(PanLiNodeInfo.doubleLogo).done(function(images){
-   console.log(images.length)
-   console.log(images[0].src+" "+images[0].width)
-})

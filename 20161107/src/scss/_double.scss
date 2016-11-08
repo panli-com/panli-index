@@ -8,17 +8,48 @@
     .double-logo-content{
         position: absolute;
         width: 225px;
-        height: 92px;
+        height: 90px;
         left: 154px; 
-        top: -25px;
+        top: -20px;
         background-repeat: no-repeat;
         background-position: left center;
         &.one-src{       
-            background-image: url(../imgs/double11.gif)
+            // background-image: url(../imgs/double11.gif)
         }
         &.time-src{
             background-image: url(../imgs/time.png)
         }
         
+    }
+}
+.double-time-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    // opacity: .8;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    color: #ff6e6e;
+    // background-color: seagreen;
+    &>span{
+        position: absolute;
+        text-align: center;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+        // opacity: .5; 
+        // background-color: red;
+    }
+    .double-time-h{
+        left: 18px;
+    }
+    .double-time-m{
+        left: 63px;
+    }
+    .double-time-s{
+        left: 109px; 
     }
 }
