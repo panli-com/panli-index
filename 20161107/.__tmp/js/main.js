@@ -52,13 +52,15 @@
                 var elimg =  el.find(".logo-img");
                 var elimgSrc = elimg.attr("data-src");
                 var elimgDoubleSrc = elimg.attr("data-double-src");
+
+                var isrc = elimg.attr('src');
                 if(!vm.isThatDay()){
                     el.removeClass("double-logo-wrap");
-                    elimg.attr('src',elimgSrc);
+                    isrc == elimgSrc ? "" : elimg.attr('src',elimgSrc);
                     return false;
                 }
                 el.addClass("double-logo-wrap");
-                elimg.attr('src',elimgDoubleSrc);
+                isrc == elimgDoubleSrc ? "" : elimg.attr('src',elimgDoubleSrc);
                 vm.creatDom();
             },
             checkTime:function(i){

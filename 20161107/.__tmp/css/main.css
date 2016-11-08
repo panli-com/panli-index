@@ -95,10 +95,14 @@
   -moz-animation-name: bounceInDown;
   animation-name: bounceInDown; }
 
+.double-logo-content {
+  display: none; }
+
 .double-logo-wrap {
   overflow: initial;
   width: 380px; }
   .double-logo-wrap .double-logo-content {
+    display: block;
     position: absolute;
     width: 225px;
     height: 90px;
