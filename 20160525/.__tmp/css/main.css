@@ -1254,6 +1254,19 @@ clearfix:after {
     position: absolute;
     right: 0px; }
 
+.jui-authentication {
+  position: relative;
+  padding: 9px 0; }
+  .jui-authentication a {
+    text-decoration: none;
+    display: inline-block;
+    height: 51px;
+    margin-right: 26px;
+    line-height: 51px; }
+    .jui-authentication a img {
+      display: inline-block;
+      vertical-align: middle; }
+
 .r_l_nav {
   position: fixed;
   top: 50%;

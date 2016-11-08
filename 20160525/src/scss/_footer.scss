@@ -204,3 +204,18 @@
 		right: 0px;
 	}
 }
+.jui-authentication{
+	position: relative;
+	padding: 9px 0;
+	a{
+		text-decoration: none;
+		display: inline-block;
+		height: 51px;
+		margin-right: 26px;
+		line-height: 51px;
+		img{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
