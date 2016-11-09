@@ -18,11 +18,26 @@ var PanLiNodeInfo = {
     time: "1478581773",
     double:{
       startTime:"2016/11/08 00:00:00",
-      endTime:"2016/11/08 13:10:48",
+      endTime:"2016/11/08 13:10:00",
       logo:[
         './build/imgs/double11.gif',
         './build/imgs/time.png'
-        ]
+        ],
+      layer:{
+          more:'javascript:void(0);',
+          href:[
+              'localhost/',
+              'www.panli.com/',
+              'www.panli.com/Special/TopicColumn.aspx',
+              'www.panli.com/Free_postage/',
+              'www.panli.com/Piece/',
+              'www.panli.com/mypanli/',
+              'www.panli.com/mypanli/Favorite.aspx',
+              'www.panli.com/mypanli/OrderCart.aspx',
+              'www.panli.com/mypanli/OrderList.aspx',
+              'www.panli.com/mypanli/ShoppingCart.aspx'
+          ]
+      },
     }
 };
 PD(function () {
@@ -39,4 +54,5 @@ PD(function () {
 <div style="display:none">
     <img class="hide-double-img" src="./build/imgs/double11.gif" alt="">
     <img class="hide-double-img" src="./build/imgs/time.png" alt="">
+    <a href="javascript:void(0);" class="double-close"></a>
 </div>

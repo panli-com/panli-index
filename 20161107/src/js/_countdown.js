@@ -20,6 +20,8 @@
                     time.endTime ? vm.endTime = time.endTime :"";
                 }
                 vm.start();
+
+                vm.startLayer();
             },
             start:function(){
                 var vm = this;
@@ -103,26 +105,103 @@
                 elm.removeClass("one-src");
                 
                 elm.html(stcbox);
+                PD(".double-time-layer").html(stcbox);
 
                 elm.addClass("time-src");
+            },
+            getHours:function(){
+                var vm = this;
+                var nowTime = vm.nowTime;
+                var hours = new Date(nowTime).getHours();
+                return hours;
             },
             setInterval:function(){
                 var vm = this;
                 vm.start();
             },
-        }
-        // var EndTime = Countdown.endTime;
-        // var NowTime = Countdown.startTime;
-        // var t = EndTime.getTime() - NowTime.getTime();
-        // var d = Math.floor(t / 1000 / 60 / 60 / 24);
-        // var h = Math.floor(t / 1000 / 60 / 60 % 24);
-        // var m = Math.floor(t / 1000 / 60 % 60);
-        // var s = Math.floor(t / 1000 % 60);
+            cookie:'doubleLayer',
+            setCookie:function(val){
+                var vm = this;
+                var name = vm.cookie;
+                Cookies.set(name, val, { expires: 1 });
+            },
+            getCookie:function(){
+                var vm = this;
+                var name = vm.cookie;
+                return Cookies.get(name);
+            },
+            getHref:function(){
+               return window.location.hostname + window.location.pathname
+            },
+            startLayer:function(){
+                var vm = this;
+                var hours = vm.getHours();
+                if(!vm.isLayer()){
+                    return false;
+                }
 
-        // console.log(d + "天");
-        // console.log(h + "时");
-        // console.log(m + "分");
-        // console.log(s + "秒");
+                if(hours < 22){
+                    vm.setCookie(1);
+                }else{
+                  vm.setCookie(2);  
+                }
+
+                vm.creatLayer();
+
+            },
+            isLayer:function(){
+                var vm = this;
+                var cookie = vm.getCookie();
+
+                if(!vm.isThatDay || cookie == '2' || !vm.isLayerPage()){
+                    return false;
+                }
+
+                if(cookie == '1' && vm.getHours()<22){
+                    return false;
+                }
+
+                return true;
+            },
+            isLayerPage:function(){
+                var vm = this;
+                var _href = vm.getHref();
+                var hrefArr = PanLiNodeInfo.double.layer.href;
+                var leng = hrefArr.length;
+                var isL = false;
+
+                for(var i = 0;i<leng;i++){
+                    if(hrefArr[i] == _href){
+                        isL = true;
+                    }
+                }
+
+                return isL; 
+            },
+            creatLayer:function(){
+                var layer = PanLiNodeInfo.double.layer;
+                var close = '<a href="javascript:void(0);" class="double-close" title="关闭" ></a>';
+                var more = '<a href="'+ layer.more +'" class="double-more" title="查看"></a>';
+
+                var timebox = '<div class="double-time-layer"><div class="double-time-box"><span class="double-time-h">00</span><span class="double-time-m">00</span><span class="double-time-s">10</span></div></div>';
+                var stc = '<div class="layer-double-box">'+
+                            ''+ close + timebox + more +
+                            '</div>';
+                PL.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: false,
+                    area: '410px',
+                    skin: 'layui-Pan-nobg', //没有背景色
+                    shadeClose: false,
+                    content: stc
+                });
+
+                PD("body").on("click",".double-close",function(){
+                    PL.closeAll();
+                })
+            }
+        }
 
         return Countdown;
     });
