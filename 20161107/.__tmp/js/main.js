@@ -282,6 +282,9 @@
                 var vm = this;
                 vm.start();
             },
+            isLogin:function(){
+               return PanLiNodeInfo.isLoggedIn;
+            },
             cookie:'doubleLayer',
             setCookie:function(val){
                 var vm = this;
@@ -299,28 +302,32 @@
             startLayer:function(){
                 var vm = this;
                 var hours = vm.getHours();
-                if(!vm.isLayer()){
-                    return false;
+                var isLogin = vm.isLogin();
+                if(vm.isLayer()){
+                    if(hours < 22 && isLogin){
+                        vm.setCookie(1);
+                    }else{
+                        vm.setCookie(2);  
+                    }
+                    vm.creatLayer();
                 }
-
-                if(hours < 22){
-                    vm.setCookie(1);
-                }else{
-                  vm.setCookie(2);  
-                }
-
-                vm.creatLayer();
 
             },
             isLayer:function(){
                 var vm = this;
                 var cookie = vm.getCookie();
+                var isLogin = vm.isLogin();
+                var hours = vm.getHours();
+                if(isLogin && cookie == '2' && hours<22){
+                    vm.setCookie(1);
+                    cookie = '1';
+                }
 
-                if(!vm.isThatDay || cookie == '2' || !vm.isLayerPage()){
+                if(!vm.isThatDay() || cookie == '2' || !vm.isLayerPage()){
                     return false;
                 }
 
-                if(cookie == '1' && vm.getHours()<22){
+                if(cookie == '1' && hours<23){
                     return false;
                 }
 
@@ -346,7 +353,7 @@
                 var close = '<a href="javascript:void(0);" class="double-close" title="关闭" ></a>';
                 var more = '<a href="'+ layer.more +'" class="double-more" title="查看"></a>';
 
-                var timebox = '<div class="double-time-layer"><div class="double-time-box"><span class="double-time-h">00</span><span class="double-time-m">00</span><span class="double-time-s">10</span></div></div>';
+                var timebox = '<div class="double-time-layer"><div class="double-time-box"><span class="double-time-h">计</span><span class="double-time-m">算</span><span class="double-time-s">中</span></div></div>';
                 var stc = '<div class="layer-double-box">'+
                             ''+ close + timebox + more +
                             '</div>';

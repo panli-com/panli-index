@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="./build/css/logo.double.11.css">
 <script type="text/javascript">
 var PanLiNodeInfo = {
-    time: "1478581773",
+    time: "1478581773",isLoggedIn:true,
     double:{
       startTime:"2016/11/08 00:00:00",
       endTime:"2016/11/08 13:10:00",
@@ -44,13 +44,16 @@ var PanLiNodeInfo = {
     }
 };
 PD(function () {
-    var dob = PanLiNodeInfo.double;
-    var obj = {
-        nowTime:new Date(PanLiNodeInfo.time*1000).getTime(),
-        startTime:new Date(dob.startTime).getTime(),
-        endTime:new Date(dob.endTime).getTime()
-    }
-    doubleAction.init(obj);
+    
+        var dob = PanLiNodeInfo.double;
+        var obj = {
+            nowTime:new Date(PanLiNodeInfo.time*1000).getTime(),
+            startTime:new Date(dob.startTime).getTime(),
+            endTime:new Date(dob.endTime).getTime()
+        }
+        doubleAction.init(obj);
+    
+   
 });
 </script>
 </head>
