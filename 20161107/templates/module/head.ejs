@@ -41,16 +41,13 @@ var PanLiNodeInfo = {
     }
 };
 PD(function () {
-    
-        var dob = PanLiNodeInfo.double;
-        var obj = {
-            nowTime:new Date(PanLiNodeInfo.time*1000).getTime(),
-            startTime:new Date(dob.startTime).getTime(),
-            endTime:new Date(dob.endTime).getTime()
-        }
-        doubleAction.init(obj);
-    
-   
+    var dob = PanLiNodeInfo.double;
+    var obj = {
+        nowTime:new Date(PanLiNodeInfo.time*1000).getTime(),
+        startTime:new Date(dob.startTime).getTime(),
+        endTime:new Date(dob.endTime).getTime()
+    }
+    doubleAction.init(obj);
 });
 </script>
 </head>
