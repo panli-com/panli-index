@@ -89,13 +89,29 @@
                     vm.creatDomTime();
                 },2320)
             },
-            creatDomTime:function(){
+            objTime:function(){
                 var vm = this;
                 var deff = vm.endTime - vm.nowTime;
                 var d = vm.checkTime(Math.floor(deff / 1000 / 60 / 60 / 24));
                 var h = vm.checkTime(Math.floor(deff / 1000 / 60 / 60 % 24));
                 var m = vm.checkTime(Math.floor(deff / 1000 / 60 % 60));
                 var s = vm.checkTime(Math.floor(deff / 1000 % 60));
+
+                return {
+                    day:d,
+                    hours:h,
+                    minute:m,
+                    second:s
+                }
+            },
+            creatDomTime:function(){
+                var vm = this;
+                var deff = vm.endTime - vm.nowTime;
+                var time = vm.objTime();
+                var d = time.day;
+                var h = time.hours;
+                var m = time.minute;
+                var s = time.second;
 
                 var elm = PD(".double-logo-content");
                 elm.addClass("animated bounceInDown");
@@ -186,11 +202,18 @@
                 return isL; 
             },
             creatLayer:function(){
+                var vm = this;
                 var layer = PanLiNodeInfo.double.layer;
                 var close = '<a href="javascript:void(0);" class="double-close" title="关闭" ></a>';
                 var more = '<a href="'+ layer.more +'" class="double-more" title="查看"></a>';
 
-                var timebox = '<div class="double-time-layer"><div class="double-time-box"><span class="double-time-h">计</span><span class="double-time-m">算</span><span class="double-time-s">中</span></div></div>';
+                var time = vm.objTime();
+                var d = time.day;
+                var h = time.hours;
+                var m = time.minute;
+                var s = time.second-1;
+
+                var timebox = '<div class="double-time-layer"><div class="double-time-box"><span class="double-time-h">'+ h +'</span><span class="double-time-m">'+ m +'</span><span class="double-time-s">'+ s +'</span></div></div>';
                 var stc = '<div class="layer-double-box">'+
                             ''+ close + timebox + more +
                             '</div>';

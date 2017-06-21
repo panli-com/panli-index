@@ -1,7 +1,7 @@
 {
   "name": "panli-index",
   "version": "1.0.0",
-  "app":"Panli 首页公共库",
+  "app": "Panli 首页公共库",
   "description": "描述",
   "main": "pan.js",
   "scripts": {
@@ -9,9 +9,10 @@
     "pro": "gulp pro"
   },
   "author": "Julian",
-  "homepage":"https://mu.gg#zanjser@163.com",
+  "homepage": "https://mu.gg#zanjser@163.com",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.25.0",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-stage-0": "^6.5.0",
     "browser-sync": "^2.9.11",

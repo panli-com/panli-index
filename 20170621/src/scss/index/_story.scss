@@ -1,0 +1,32 @@
+.page-index{
+
+.story {
+	width:854px;
+	overflow:hidden;
+	ul {
+		width:900px;
+		li {
+			float:left;
+			width:270px;
+			display:inline;
+			margin-right:20px;
+		}
+	}
+}
+.story_img {
+	display:block;
+	img {
+		width:270px;
+		height:150px;
+	}
+}
+.story_name {
+	font-size:14px;
+	color:#444;
+	text-decoration:none;
+	line-height:30px;
+	text-decoration:none;
+}
+
+
+}

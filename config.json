@@ -1,35 +1,51 @@
-{   
-    "start":"20161107",
-    "20161107": {
-        "title": "2016双11 Logo",
-        "keywords":"",
-        "description":"",
-        "version":"0.0.2",
-        "author":"Julian",
-        "url":"http://www.panli.com/",
-        "load": {
-            "css": ["./20161107/src/scss/main.scss"],
-            "js": ["./libs/cookie.js","./20161107/src/js/*.js"]
-        },
-        "build":{
-            "css":"logo.double.11.css",
-            "js":"logo.double.11.js"
-        }
+{
+  "start": "20170621",
+  "20170621": {
+    "title": "开启蟠桃 Panli首页",
+    "keywords": "",
+    "description": "",
+    "version": "0.1.3",
+    "author": "Julian",
+    "url": "http://www.panli.com/",
+    "load": {
+      "css": ["./20170621/src/scss/main.scss"],
+      "js": ["./20170621/src/js/*.js"]
     },
-    "20160525": {
-        "title": "Panli首页",
-        "keywords":"",
-        "description":"",
-        "version":"0.0.2",
-        "author":"Julian",
-        "url":"http://www.panli.com/",
-        "load": {
-            "css": ["./20160525/src/scss/main.scss"],
-            "js": ["./20160525/src/js/*.js"]
-        },
-        "build":{
-            "css":"main.min.css",
-            "js":"head_2016.js"
-        }
+    "build": {
+      "css": "main.min.css",
+      "js": "head_2016.js"
     }
+  },
+  "20161107": {
+    "title": "2016双11 Logo",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.2",
+    "author": "Julian",
+    "url": "http://www.panli.com/",
+    "load": {
+      "css": ["./20161107/src/scss/main.scss"],
+      "js": ["./libs/cookie.js", "./20161107/src/js/*.js"]
+    },
+    "build": {
+      "css": "logo.double.11.css",
+      "js": "logo.double.11.js"
+    }
+  },
+  "20160525": {
+    "title": "Panli首页",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.2",
+    "author": "Julian",
+    "url": "http://www.panli.com/",
+    "load": {
+      "css": ["./20160525/src/scss/main.scss"],
+      "js": ["./20160525/src/js/*.js"]
+    },
+    "build": {
+      "css": "main.min.css",
+      "js": "head_2016.js"
+    }
+  }
 }

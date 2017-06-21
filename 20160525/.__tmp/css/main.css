@@ -496,7 +496,6 @@ clearfix:after {
   background-color: #fff;
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  -webkit-transition: top 0.2s ease-in;
   -moz-transition: top 0.2s ease-in;
   transition: top 0.2s ease-in; }
   .overHead .logo {
@@ -549,7 +548,6 @@ clearfix:after {
   background-position: -60px -30px;
   top: -4px;
   right: 5px;
-  -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
   -moz-transition: transform 0.3s ease-in, -moz-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
@@ -704,7 +702,6 @@ clearfix:after {
 .nav_icon .icon_j {
   right: 22px;
   top: 4px;
-  -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
   -moz-transition: transform 0.3s ease-in, -moz-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
@@ -1023,7 +1020,6 @@ clearfix:after {
   .page-index .referr img {
     float: left;
     display: inline;
-    -webkit-transition: -webkit-transform 0.3s ease-in;
     transition: -webkit-transform 0.3s ease-in;
     -moz-transition: transform 0.3s ease-in, -moz-transform 0.3s ease-in;
     transition: transform 0.3s ease-in;
@@ -1276,7 +1272,6 @@ clearfix:after {
   width: 60px; }
 
 .hover_b, .hover_a {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   -moz-transition: transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -1359,7 +1354,6 @@ clearfix:after {
   border-right: solid 1px #f8f8f8; }
 
 .hover_b, .hover_a {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   -moz-transition: transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
